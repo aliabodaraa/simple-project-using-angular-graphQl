@@ -1,0 +1,11 @@
+<div class="container mt-4 mb-4">
+    <div *ngIf="category" class="card mb-3">
+        <img src="https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"
+            class="card-img-top" alt="..." style="max-height: 75vh;object-fit: cover;">
+        <div class="card-body">
+            <h5 class="card-title">{{category.name}}</h5>
+            <a href="#" class="btn btn-secondary" [routerLink]="['/categories', category.id,'products']">products</a>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+</div>

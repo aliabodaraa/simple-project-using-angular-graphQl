@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
+import { CategoryDataService } from './category-data.service';
 
 @Component({
   selector: 'app-category',
@@ -8,7 +8,7 @@ import { DataService } from '../data.service';
 })
 export class CategoryComponent implements OnInit {
   categories: any;
-  constructor(private data: DataService) {}
+  constructor(private data: CategoryDataService) {}
 
   ngOnInit(): void {
     this.data.getCategories().subscribe(({ data }: any) => {

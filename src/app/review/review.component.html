@@ -1,0 +1,10 @@
+<div class="container mt-4 mb-4">
+    <h2 class="mb-2">Reviews :</h2>
+    <ul>
+        <li *ngFor="let review of reviews" class=" d-flex justify-content-between mb-1">{{review.title}}
+            <button class="btn btn-warning card-text" style="cursor: pointer;" [routerLink]="['/reviews',review.id]">
+                show review
+            </button>
+        </li>
+    </ul>
+</div>

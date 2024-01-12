@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
+import { ReviewDataService } from './review-data.service';
 
 @Component({
-  selector: 'app-reviewer',
-  templateUrl: './reviewer.component.html',
-  styleUrls: ['./reviewer.component.scss'],
+  selector: 'app-review',
+  templateUrl: './review.component.html',
+  styleUrls: ['./review.component.scss'],
 })
 export class ReviewerComponent implements OnInit {
   reviews: any;
-  constructor(private data: DataService) {}
+  constructor(private data: ReviewDataService) {}
 
   ngOnInit(): void {
     this.data.getReviews().subscribe(({ data }: any) => {

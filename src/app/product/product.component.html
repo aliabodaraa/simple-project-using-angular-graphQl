@@ -1,18 +1,23 @@
-<hr>
-<div class="container-fluid d-flex flex-row flex-wrap justify-content-between !direction !spacing">
-    <div *ngFor="let product of products" class="card mb-2" style="width:18rem;">
-        <img [src]="product.image" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{product.name}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted ">{{product.quantity}}</h6>
-            <p class="card-text">{{product.description}}</p>
-            <p class="card-text">{{product.price}}</p>
-            <p class="card-text">{{product.onSale}}</p>
-            <p class="card-text">{{product.description}}</p>
-            <p class="card-text">{{product.category.name}}</p>
-            <p class="btn btn-primary card-text" style="cursor: pointer;"
-                [routerLink]="['/categories', product.category.id,'products',product.id,'reviews']">reviews
-            </p>
+<div class="container mt-4 mb-4">
+    <h2>Products :</h2>
+    <div class="row">
+        <div *ngFor="let product of products" class="col-xs-12 col-sm-6 col-md-6 col-lg-3 mb-2">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{product.name}}</h5>
+                    <p class="card-text">{{product.description}}</p>
+                    <p class="card-text">{{product.price}}</p>
+                    <p class="card-text">{{product.onSale}}</p>
+                    <p class="card-text">{{product.category.name}}</p>
+                    <p class="card-text">{{product.quantity}}</p>
+                    <div class="links d-flex justify-content-between">
+                        <a href="#" class="btn btn-primary" [routerLink]="['/products',product.id]">
+                            show product</a>
+                        <a href="#" class="btn btn-secondary"
+                            [routerLink]="['/categories', product.category.id,'products',product.id,'reviews']">reviews</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

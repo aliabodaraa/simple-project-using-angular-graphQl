@@ -1,0 +1,10 @@
+<div class="container mt-4 mb-4">
+    <div *ngIf="review" class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title">title : {{review.title}}</h5>
+            <p class="card-text">comment : {{review.comment}}</p>
+            <p class="card-text">rating : {{review.rating}}</p>
+            <p class="card-text"><small class="text-muted">{{review.date}}</small></p>
+        </div>
+    </div>
+</div>

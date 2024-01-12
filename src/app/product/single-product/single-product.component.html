@@ -1,0 +1,16 @@
+<div class="container mt-4 mb-4">
+    <div class="card w-100">
+        <div class="card-body">
+            <h5 class="card-title">{{product.name}}</h5>
+            <p class="card-text">{{product.description}}</p>
+            <p class="card-text">{{product.price}}</p>
+            <p class="card-text">{{product.onSale}}</p>
+            <p class="card-text">{{product.category.name}}</p>
+            <p class="card-text">{{product.quantity}}</p>
+            <div class="links d-flex justify-content-between">
+                <a href="#" class="btn btn-secondary"
+                    [routerLink]="['/categories', product.category.id,'products',product.id,'reviews']">reviews</a>
+            </div>
+        </div>
+    </div>
+</div>
